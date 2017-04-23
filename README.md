@@ -24,7 +24,7 @@ You can use the API directly:
 
 ```javascript
 const jsonapi2raml = require('jsonapi2raml')
-jsonapi2raml.parsePayload({
+jsonapi2raml.generate({
   payload: [...],
   output: 'path/to/raml',
   generator: jsonapi2raml.singleFile
@@ -75,7 +75,7 @@ Generates the RAML Documentation in a single file.
 
 ```javascript
 const jsonapi2raml = require('jsonapi2raml')
-jsonapi2raml.parsePayload({
+jsonapi2raml.generate({
   payload: [...],
   output: 'path/to/raml',
   generator: jsonapi2raml.singleFile
