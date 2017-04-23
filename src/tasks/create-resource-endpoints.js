@@ -127,9 +127,7 @@ function createResourceRelationshipEndpoint (name, relationship) {
     [ `/${name}` ]: {
       type: {
         [ resourceType ]: {
-          [ variableName ]: {
-            type: documentType
-          }
+          [ variableName ]: documentType
         }
       }
     }
