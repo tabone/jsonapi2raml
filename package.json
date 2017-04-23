@@ -1,0 +1,28 @@
+{
+  "name": "jsonapi2raml",
+  "version": "0.2.0",
+  "description": "Generates RAML for a JSON-API Payload",
+  "main": "index.js",
+  "bin": {
+    "jsonapi2raml": "./cli.js"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "keywords": [
+    "raml",
+    "json-api",
+    "documentation",
+    "automated"
+  ],
+  "author": "Luca Tabone <taboneluca3@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "case": "^1.5.2",
+    "json2yaml": "^1.1.0",
+    "yargs": "^7.1.0"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2"
+  }
+}
