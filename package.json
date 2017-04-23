@@ -1,7 +1,7 @@
 {
   "name": "jsonapi2raml",
-  "version": "0.2.1",
-  "description": "Generates RAML for a JSON-API Payload",
+  "version": "0.2.2",
+  "description": "Generates RAML for REST APIs that follow JSON-API spec.",
   "main": "index.js",
   "bin": {
     "jsonapi2raml": "./cli.js"
