@@ -106,3 +106,8 @@ Example of a `Payload` file:
 
 > Note: The value of an attribute should be a [RAML Built-in Type](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/#built-in-types).
 
+# Acknowledgments
+Thanks for your feedback & support!
+- [gdebat](https://github.com/gdebat)
+- [giulio90](https://github.com/giulio90)
+- [isaacchircop](https://github.com/isaacchircop)
