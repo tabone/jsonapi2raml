@@ -8,6 +8,10 @@ Utility used to generate [RAML v1.0](https://github.com/raml-org/raml-spec/blob/
 ## Installation
 
     npm install jsonapi2raml
+    
+## Demo
+
+[![Demo](https://img.youtube.com/vi/LG8ZIgmzXAw/0.jpg)](https://www.youtube.com/watch?v=LG8ZIgmzXAw)
 
 ## CLI
 
@@ -92,19 +96,29 @@ For `jsonapi2raml` to generate the RAML Documentation of a REST API that follow 
 Example of a `Payload` file:
 ```javascript
 [{
-    "type": "user",
-    "attributes": {
-        "name": "string",
-        "date": "datetime"
+  "type": "user",
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 10,
+      "pattern": "/[a-zA-Z]/"
     },
-    "relationships": {
-        "friends": {
-            "data": [{
-                "type": "user"
-            }]
-        }
+    "age": "integer"
+  },
+  "relationships": {
+    "token": {
+      "data": {
+        "type": "token"
+      }
     }
-}, ...]
+  }
+}, {
+  "type": "token",
+  "attributes": {
+    "value": "string",
+    "created": "datetime"
+  }
+}]
 ```
 
 > Note: The value of an attribute should be a [RAML Built-in Type](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/#built-in-types).
