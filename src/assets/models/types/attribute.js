@@ -69,9 +69,6 @@ function setupRAML ({ resource }) {
   // For every attribute that the JSON-API Resource being represented has, there
   // should be a property inside the RAML Type.
   Object.keys(resource.attributes).forEach(name => {
-    this.raml.properties[name] = {
-      required: true,
-      type: resource.attributes[name]
-    }
+    this.raml.properties[name] = resource.attributes[name]
   })
 }
