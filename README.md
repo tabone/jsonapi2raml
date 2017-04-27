@@ -1,3 +1,6 @@
+[![npm version](https://badge.fury.io/js/jsonapi2raml.svg)](https://badge.fury.io/js/jsonapi2raml)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 # jsonapi2raml
 
 Utility used to generate [RAML v1.0](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/) Documentation for REST APIs that follow the [JSON-API spec](http://jsonapi.org/format/).
