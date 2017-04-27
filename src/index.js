@@ -135,8 +135,14 @@ function createResourceTypes (resource) {
     tasks.createAttributeType({ resource }),
     tasks.createRelationshipType({ resource })
   ]).then(([ attributeType, relationshipType ]) => {
-    types[attributeType.name] = attributeType
-    types[relationshipType.name] = relationshipType
+    if (attributeType !== null) {
+      types[attributeType.name] = attributeType
+    }
+
+    if (relationshipType !== null) {
+      types[relationshipType.name] = relationshipType
+    }
+
     // Create Resource RAML Representational Objects.
     return tasks.createResourceType({
       resource, attributeType, relationshipType
