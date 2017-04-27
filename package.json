@@ -1,6 +1,6 @@
 {
   "name": "jsonapi2raml",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Generates RAML for REST APIs that follow JSON-API spec.",
   "main": "index.js",
   "bin": {

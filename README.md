@@ -34,7 +34,7 @@ const jsonapi2raml = require('jsonapi2raml')
 jsonapi2raml.generate({
   payload: [...],
   output: 'path/to/raml',
-  generator: jsonapi2raml.singleFile
+  generator: jsonapi2raml.generators.singleFile
 })
 ```
 
