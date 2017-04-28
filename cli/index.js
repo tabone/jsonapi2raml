@@ -7,11 +7,12 @@ const jsonapi2raml = require('../index')
 
 // Parse arguments.
 const argv = require('yargs')
-  .usage('Usage: $0 <file-name> <file-output>')
+  .usage('Usage: $0 <file-name> <file-output> [options]')
   .example('$0 payload.json payload')
+  .example('$0 -v')
   .options(options)
-  .help('h')
-  .alias('h', 'help')
+  .help('help')
+  .alias('help', 'h')
   .check(validator)
   .argv
 
