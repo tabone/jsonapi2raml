@@ -15,6 +15,12 @@ const argv = require('yargs')
   .check(validator)
   .argv
 
+// If user has requested the version, display the version and exit.
+if (argv.version) {
+  console.log(require('../package').version)
+  return
+}
+
 // Read Payload file.
 fs.readFile(argv._[0], 'utf-8', (err, content) => {
   // Stop process on error.
