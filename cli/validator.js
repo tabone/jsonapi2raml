@@ -7,6 +7,11 @@
  *                  reason why they are not.
  */
 module.exports = argv => {
+  // When `jsonapi2raml` CLI is invoked with the `version` flag, it should
+  // consider any provided args as valid, since the lib will only be displaying
+  // the version before exiting.
+  if (argv.version === true) return true
+
   // User is required to provide:
   //   > Name of the file containing info about the JSON-API Resources which
   //     `jsonapi2raml` will be parsing to create the RAML Documentation (this
