@@ -6,5 +6,6 @@
  */
 module.exports = {
   alias: 'v',
-  describe: 'Show version'
+  describe: 'Show version',
+  type: 'boolean'
 }
