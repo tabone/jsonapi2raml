@@ -2,22 +2,17 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 # jsonapi2raml
-
 Utility used to generate [RAML v1.0](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md/) Documentation for REST APIs that follow the [JSON-API spec](http://jsonapi.org/format/).
 
 ## Installation
-
     npm install jsonapi2raml
-    
-## Demo
 
+## Demo
 [![Demo](https://img.youtube.com/vi/LG8ZIgmzXAw/0.jpg)](https://www.youtube.com/watch?v=LG8ZIgmzXAw)
 
 ## CLI
-
 ### Usage
-
-    jsonapi2raml <payload> <output>
+    jsonapi2raml <file-name> <file-output> [options]
 
 > Note: To use `jsonapi2raml` from CLI you need to install it [globally](https://docs.npmjs.com/cli/install).
 
@@ -25,6 +20,7 @@ Utility used to generate [RAML v1.0](https://github.com/raml-org/raml-spec/blob/
 | ------------ | ----------- |
 | `<payload>`  | The name of the file containing the payload which `jsonapi2raml` will parse to generate the RAML Documenation. [More info about the structure of this file below](#payload-structure). |
 | `<output>`   | The name of the file or directory where `jsonapi2raml` will be generating the RAML documentation in. |
+| `version`   | Shows version. |
 
 ## API
 You can use the API directly:
@@ -85,12 +81,11 @@ const jsonapi2raml = require('jsonapi2raml')
 jsonapi2raml.generate({
   payload: [...],
   output: 'path/to/raml',
-  generator: jsonapi2raml.singleFile
+  generator: jsonapi2raml.generators.singleFile
 })
 ```
 
 ## Payload Structure
-
 For `jsonapi2raml` to generate the RAML Documentation of a REST API that follow the [JSON-API spec](http://jsonapi.org/format/) all it needs is info about the `JSON-API Resource`s.
 
 Example of a `Payload` file:
