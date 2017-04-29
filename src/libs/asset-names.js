@@ -51,6 +51,21 @@ module.exports = {
     errorDocument: 'ErrorDocument',
 
     /**
+     * Name of RAML Type representing a JSON-API Resource object.
+     * Ref: http://jsonapi.org/format/#document-resource-objects
+     *
+     * @example
+     *   {
+     *     "id" :"1",
+     *     "type": "user",
+     *     "attributes": {...},
+     *     "relationships: {...}
+     *   }
+     * @type {String}
+     */
+    resourceObject: 'ResourceObject',
+
+    /**
      * Name of RAML Type representing a JSON-API To-One Relationship object.
      * Ref: http://jsonapi.org/format/#document-resource-object-relationships
      *

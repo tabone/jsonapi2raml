@@ -100,7 +100,7 @@ function setupRAML ({ resource, attributeType, relationshipType }) {
 
   // Initialize the RAML Type.
   this.raml = {
-    type: assetNames.types.resourceIdentifier,
+    type: assetNames.types.resourceObject,
     displayName: `'${resourceName}' Resource`,
     description: `'${resourceName}' Resource Object`,
     properties: {}
