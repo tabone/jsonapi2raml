@@ -1,10 +1,15 @@
 'use strict'
 
+/**
+ * Contains info about the HTTP 204 Response that can be retrieved when making
+ * an HTTP DELETE Request to `/{type}/{id}/relationships/{relationship-name}/`
+ * when the relationship is a To-Many relationship.
+ * Ref: http://jsonapi.org/format/#crud-updating-relationship-responses-204
+ * @type {Object}
+ */
 module.exports = {
-  description: 'HTTP Response for when the relationship has been ' +
-    'removed, but unlike HTTP Status 200 the server did not provide ' +
-    'the updated relationships in the HTTP Response Body.\n' +
-    'More Info:' +
+  description: `HTTP Response returned when the proposed changes are already ` +
+    `persisted.\nMore Info:` +
     'http://jsonapi.org/format/#crud-updating-relationship-responses-204',
   headers: {
     'Content-Type': {

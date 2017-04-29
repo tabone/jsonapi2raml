@@ -1,8 +1,8 @@
 'use strict'
 
 /**
- * Contains info about the methods that can be made to `/{type}/` endpoint
- * @type {[type]}
+ * Contains info about the HTTP methods that can be used in `/{type}/` endpoint.
+ * @type {Object}
  */
 module.exports = {
   get: require('./get'),

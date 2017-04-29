@@ -1,10 +1,15 @@
 'use strict'
 
+/**
+ * Contains info about the HTTP 204 Response that can be retrieved when making
+ * an HTTP DELETE Request to `/{type}/{id}/`.
+ * Ref: http://jsonapi.org/format/#crud-deleting-responses-204
+ * @type {Object}
+ */
 module.exports = {
-  description: 'HTTP Response for when the resource has been deleted, ' +
-    'but unlike HTTP Status 200 the server did not provide anything ' +
-    'in the HTTP Response Body.\n' +
-    'More info: http://jsonapi.org/format/#crud-deleting-responses-204',
+  description: `HTTP Response returned when the JSON-API Resource has been ` +
+    `deleted and no content is provided.` +
+    `\nMore info: http://jsonapi.org/format/#crud-deleting-responses-204`,
   headers: {
     'Content-Type': {
       description: 'JSON-API Content Type of HTTP Request ' +

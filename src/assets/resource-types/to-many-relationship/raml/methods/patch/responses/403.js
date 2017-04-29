@@ -2,10 +2,17 @@
 
 const assetNames = require('../../../../../../../libs/asset-names')
 
+/**
+ * Contains info about the HTTP 403 Response that can be retrieved when making
+ * an HTTP PATCH Request to `/{type}/{id}/relationships/{relationship-name}/`
+ * when the relationship is a To-Many relationship.
+ * Ref: http://jsonapi.org/format/#crud-updating-relationship-responses-403
+ * @type {Object}
+ */
 module.exports = {
-  description: 'HTTP Response for when the request is not allowed.\n' +
-    'More Info:' +
-    'http://jsonapi.org/format/#crud-updating-relationship-responses-403',
+  description: 'HTTP Response returned when the update is not allowed.' +
+    `\nMore Info:` +
+    `http://jsonapi.org/format/#crud-updating-relationship-responses-403`,
   headers: {
     'Content-Type': {
       description: 'JSON-API Content Type of HTTP Request ' +

@@ -2,9 +2,16 @@
 
 const assetNames = require('../../../../../../libs/asset-names')
 
+/**
+ * Contains info about the HTTP POST Request that can be made to
+ * `/{type}/{id}/relationships/{relationship-name}/` endpoint when the
+ * relationship is a To-Many Relationship.
+ * Ref: http://jsonapi.org/format/#crud-updating-to-many-relationships
+ * @type {Object}
+ */
 module.exports = {
-  description: 'Endpoint used to add To-Many relationships of a ' +
-    'resource.\nMore info: ' +
+  description: `Endpoint used to add relationships to a JSON-API To-Many ` +
+    `Relationship object of a Primary JSON-API Resource.\nMore info:` +
     'http://jsonapi.org/format/#crud-updating-to-many-relationships',
   is: [ assetNames.traits.jsonAPIHeader ],
   body: {

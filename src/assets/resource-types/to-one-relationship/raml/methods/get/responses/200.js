@@ -2,10 +2,19 @@
 
 const assetNames = require('../../../../../../../libs/asset-names')
 
+/**
+ * Contains info about the HTTP 200 Response that can be retrieved when making
+ * an HTTP GET Request to `/{type}/{id}/relationships/{relationship-name}/` when
+ * the relationship is a To-One relationship.
+ * Ref: http://jsonapi.org/format/#fetching-relationships-responses-200
+ * @type {Object}
+ */
 module.exports = {
-  description: 'HTTP Response when relationship field exists.\n' +
-    'More info: ' +
-    'http://jsonapi.org/format/#fetching-relationships-responses-200',
+  description: `HTTP Response returned when the requested JSON-API To-One ` +
+    `Relationship object exist. The Primary Data in the HTTP Response Body ` +
+    `is the requested JSON-API To-One Relationship object.` +
+    `\nMore info: ` +
+    `http://jsonapi.org/format/#fetching-relationships-responses-200`,
   headers: {
     'Content-Type': {
       description: 'JSON-API Content Type of HTTP Request ' +

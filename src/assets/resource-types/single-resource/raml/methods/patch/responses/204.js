@@ -1,10 +1,15 @@
 'use strict'
 
+/**
+ * Contains info about the HTTP 204 Response that can be retrieved when making
+ * an HTTP PATCH Request to `/{type}/{id}/`.
+ * Ref: http://jsonapi.org/format/#crud-updating-responses-204
+ * @type {Object}
+ */
 module.exports = {
-  description: 'HTTP Response for when the resource has been updated, ' +
-    'but unlike HTTP Status 200 the server did not provide the updated ' +
-    'resource in the HTTP Response Body.\n' +
-    'More info: http://jsonapi.org/format/#crud-updating-responses-204',
+  description: `HTTP Response returned when the JSON-API Resource has been ` +
+    `updated as specified by the HTTP Request done.` +
+    `\nMore info: http://jsonapi.org/format/#crud-updating-responses-204`,
   headers: {
     'Content-Type': {
       description: 'JSON-API Content Type of HTTP Request ' +
