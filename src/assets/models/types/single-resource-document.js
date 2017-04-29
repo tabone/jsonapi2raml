@@ -3,6 +3,7 @@
 const asset = require('../../asset')
 const utils = require('../../../libs/utils')
 const nameUtils = require('../../../libs/name-utils')
+const assetNames = require('../../../libs/asset-names')
 
 /**
  * Meant to be used as a prototype by RAML Type Representational objects for
@@ -84,7 +85,12 @@ function setupRAML ({ resource, resourceType }) {
     displayName: `JSON-API '${resourceName} Single Resource Document'`,
     description: `JSON-API Document for when returing a single ` +
       `'${resourceName} resource'`,
-    properties: {}
+    properties: {
+      included: {
+        type: `${assetNames.types.resourceObject}[]`,
+        required: false
+      }
+    }
   }
 
   // Set the JSON-API Top-Level Document `data` property.
