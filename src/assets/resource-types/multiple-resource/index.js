@@ -1,6 +1,5 @@
 'use strict'
 
-const raml = require('./raml')
 const asset = require('../../asset')
 const assetNames = require('../../../libs/asset-names')
 
@@ -10,6 +9,6 @@ const assetNames = require('../../../libs/asset-names')
  * @type {Object}
  */
 module.exports = Object.assign(Object.create(asset), {
-  raml: raml,
+  raml: require('./raml'),
   name: assetNames.resourceTypes.multipleResource
 })
