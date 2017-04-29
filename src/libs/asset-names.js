@@ -25,6 +25,19 @@ module.exports = {
     error: 'Error',
 
     /**
+     * Name of RAML Type representing a JSON-API Source object.
+     * Ref: http://jsonapi.org/format/#error-objects
+     *
+     * @example
+     *   {
+     *     "parameter": "include",
+     *     "pointer": "/data/attributes/first-name"
+     *   }
+     * @type {String}
+     */
+    source: 'Source',
+
+    /**
      * Name of RAML Type representing a JSON-API Top-Level Document showing a
      * list of errors.
      * Ref: http://jsonapi.org/format/#document-top-level

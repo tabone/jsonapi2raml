@@ -7,6 +7,7 @@
  */
 module.exports = [
   require('./error'),
+  require('./source'),
   require('./error-document'),
   require('./resource-identifier'),
   require('./to-one-relationship'),
