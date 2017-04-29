@@ -10,8 +10,8 @@ const assetNames = require('../../../libs/asset-names')
  */
 module.exports = {
   type: 'object',
-  displayName: 'Error object',
-  description: 'JSON-API Error object.',
+  displayName: 'JSON-API Error Document',
+  description: 'JSON-API Error Document.',
   additionalProperties: false,
   properties: {
     errors: {
