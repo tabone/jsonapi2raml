@@ -1,5 +1,7 @@
 'use strict'
 
+const assetNames = require('../../../libs/asset-names')
+
 /**
  * RAML Type representing a JSON-API Error object.
  * Ref: http://jsonapi.org/format/#error-objects
@@ -29,6 +31,10 @@ module.exports = {
     },
     detail: {
       type: 'string',
+      required: false
+    },
+    source: {
+      type: assetNames.types.source,
       required: false
     },
     meta: {
